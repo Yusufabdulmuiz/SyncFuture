@@ -380,6 +380,9 @@ header{
 }
 
 /**Feature***/
+.container {
+  text-align:center;
+}
 #feature h2{
   text-align: center;
   
@@ -674,10 +677,10 @@ width: 300px;
   .footer-link h6{
     
     margin: var(--mg-7) 0;
-    font-size: 12px;
+    font-size: 15px;
   }
   #footer .footer-link ul li a {
-    font-size:10px;
+    font-size:13px;
     color: #D3D3D7;
   }
  /***copytright**/
