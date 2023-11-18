@@ -228,38 +228,12 @@ header{
     animation: animate 3s ease infinite;
   }
   @keyframes animate {
-    0%{
+    from {
      transform:  translate(-50%,-100%);
     }
-  10% {
-   transform: translate(-50%,-175%);
-    }
-    20% {
-   transform: translate(-50%,-180%);
-    }
-    30% {
-      transform: translate(-50%, -190%);
-    }
-    40% {
-      transform: translate(-50%, -200%);
-    }
-    50% {
-      transform: translate(-50%, -210%);
-    }
-    60% {
-      transform: translate(-50%, -220%);
-    }
-    70% {
-      transform: translate(-50%, -230%);
-    }
-    80% {
-      transform: translate(-50%, -240%);
-    }
-    90% {
-      transform: translate(-50%, -250%);
-    }
+  
     100% {
-      transform: translate(-50%, -300%);
+      transform: translate(-50%, -400%);
     }
   }
  
@@ -292,15 +266,39 @@ header{
   color: black;
 }
 
+
+
 /***investors**/
 #investors{
   backdrop-filter: blur(10px); background: linear-gradient(115deg,hsla(182, 88%, 44%, .1),hsla(182, 88%, 44%, .1)
   ) ;
-  display: grid ;
-  grid-template-columns: repeat(auto-fit,minmax(60px,1fr));
-  grid-gap: var(--mg-5);
-  padding: var(--pd-4);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  padding: var(--pd-1) 0;
   border-radius: 10px;
+}
+.inv-container{
+  display: flex;
+  gap: 1rem;
+  margin-left: 18rem;
+  animation: slider 70s infinite linear;
+  animation-delay: 1s;
+  align-items: center;
+  justify-content: center;
+}
+#investors img {
+  width: 70px;
+}
+
+
+@keyframes slider  {
+  from{
+    margin-left: 18rem;
+  }
+  to {
+    margin-left: -51rem;
+  }
 }
 
 /**product***/
@@ -767,8 +765,15 @@ width: 300px;
   font-size: 20px;
 }
    #investors {
-     padding: var(--pd-1);
+     border-radius: 10px;
+     padding: var(--pd-1) var(--pd-3);
+     }
+  .inv-container  { 
+    width: 100%;
+    margin-left: auto;
+     animation: none;
    }
+   
    /****analytics***/
    #analytic-container {
      grid-template-columns: repeat(3,1fr)
